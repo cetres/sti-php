@@ -13,6 +13,7 @@ LABEL io.k8s.description="Platform for building and running PHP with all needed 
 
 COPY ./s2i/bin/ /usr/local/s2i
 
+RUN chown -R 1001:1001 /var/log/httpd
 RUN chown -R 1001:1001 /var/www/html
 RUN chown -R 1001:1001 /run/httpd/
 
