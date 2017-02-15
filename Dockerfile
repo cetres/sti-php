@@ -7,7 +7,7 @@ ENV APACHE_VERSION=2.4.6 \
 
 LABEL io.k8s.description="Platform for building and running PHP with all needed drivers" \
       io.k8s.display-name="PHP Applications" \
-      io.openshift.expose-services="80:http" \
+      io.openshift.expose-services="8080:http" \
       io.openshift.tags="builder,apache,php,oci,sql" \
       io.openshift.s2i.scripts-url="image:///usr/local/s2i"
 
