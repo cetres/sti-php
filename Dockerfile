@@ -16,6 +16,7 @@ COPY ./s2i/bin/ /usr/local/s2i
 RUN chown -R 1001:1001 /var/log/httpd
 RUN chown -R 1001:1001 /var/www/html
 RUN chown -R 1001:1001 /run/httpd/
+RUN chmod -R g+rwx /run/httpd
 
 USER 1001
 
