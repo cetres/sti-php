@@ -1,4 +1,4 @@
-FROM cetres/centos-apache-php:latest
+FROM cetres/centos-apache-php:php_56
 
 LABEL maintainer="Gustavo Oliveira <cetres@gmail.com>"
 
@@ -17,12 +17,12 @@ RUN chmod a+x /usr/local/s2i/* && \
     chown -R 1001:0 /var/log/httpd && \
     chown -R 1001:0 /var/www/html && \
     chown -R 1001:0 /run/httpd/ && \
-    chown -R 1001:0 /opt/remi/php72/root/usr/share/php && \
+    chown -R 1001:0 /opt/remi/php56/root/usr/share/php && \
     chown -R 1001:0 /var/lib/php && \
     chmod -R g+rwx /var/log/httpd && \
     chmod -R g+rwx /var/www/html && \
     chmod -R g+rwx /run/httpd && \
-    chmod -R g+rwx /opt/remi/php72/root/usr/share/php && \
+    chmod -R g+rwx /opt/remi/php56/root/usr/share/php && \
     chmod -R g+rwx /var/lib/php
 
 USER 1001
