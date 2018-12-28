@@ -1,4 +1,4 @@
-FROM cetres/centos-apache-php:php_56
+FROM cetres/centos-apache-php:php56
 
 LABEL maintainer="Gustavo Oliveira <cetres@gmail.com>"
 
